@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="text" id="text">
+        <h1 class="text-center">TIC-TAC-TOE</h1>
+    </div>
+    <div class="modal" id="modal">
+        <form action="app.js" id="form1">
+            <label for="" id="name1">Player 1: </label> <input type="text" name="player1" id="p1" placeholder="Enter Name...">
+            <label for="" id="name2">Player 2: </label><input type="text" name="player2" id="p2" placeholder="Enter Name...">
+            <button type="button" class="btn btn-primary float-right" onclick="getname()">Let's Play !</button>
+        </form>
+    </div>
+    <div class="main" id="main" style="display: none;">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="player1" id="pl1">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="board">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="column" id="0" onclick="tick(this.id)"></div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="column" id="1" onclick="tick(this.id)"></div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="column" id="2" onclick="tick(this.id)"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="column" id="3" onclick="tick(this.id)"></div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="column" id="4" onclick="tick(this.id)"></div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="column" id="5" onclick="tick(this.id)"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="column" id="6" onclick="tick(this.id)"></div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="column" id="7" onclick="tick(this.id)"></div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="column" id="8" onclick="tick(this.id)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="player2" id="pl2">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="winner-pop-up" id="pop-up" style="display: none;">
+        <span class="cross" style="color: red;"><i class="fa fa-times fa-3x" onclick="cancelpopup()" aria-hidden="true"></i></span>
+        <div class="center" id="winnername">
+
+        </div>
+        <button type="button" class="btn btn-success" onclick="replay()">Play Again !</button>
+    </div>
+</body>
+
+</html>
